@@ -1,0 +1,16 @@
+.btn {
+  font-weight: bold;
+  width: 100%;
+}
+
+.card {
+  width: 500px;
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+.form-select {
+  height: 55px;
+}
