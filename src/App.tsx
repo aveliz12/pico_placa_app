@@ -1,10 +1,9 @@
 import { useState } from "react";
-import CustomInput from "./components/CustomInput";
 import "./styles/app_style.css";
-import { picoPlacaVerify } from "./utils/pico-placa";
+import CustomInput from "./components/CustomInput";
+import PicoPlacaVerfier from "./models/PicoPlacaVerifier";
 import { validatePlaca, validateTime } from "./validators/validations";
 function App() {
-
   //Inicializar datos requeridos
   const [placa, setPlaca] = useState("");
   const [date, setDate] = useState("");
@@ -13,7 +12,7 @@ function App() {
   //Gestion de pico-placa
   const handlePicoPlaca = (e: any) => {
     e.preventDefault();
-
+    const verifierPicoPlaca = new PicoPlacaVerfier(placa, new Date(date), time);
     if (placa == "" || date == "" || time == "") {
       alert("DEBE COMPLETAR TODOS LOS CAMPOS.");
     } else if (!validatePlaca(placa)) {
@@ -21,7 +20,7 @@ function App() {
     } else if (!validateTime(time)) {
       alert("HORA INVÁLIDA.");
     } else {
-      picoPlacaVerify(placa.toUpperCase(), new Date(date), time);
+      verifierPicoPlaca.picoPlacaVerify();
     }
   };
 
