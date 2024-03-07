@@ -31,39 +31,42 @@ function App() {
   };
 
   return (
-    <div className="container-fluid d-flex align-items-center justify-content-center">
-      <div className="row">
-        <div className="col">
-          <div className="card">
-            <div className="card-body">
-              <form action="" onSubmit={handlePicoPlaca}>
-                <CustomInput
-                  id="floatingPlaca"
-                  type="text"
-                  text="Placa"
-                  onChange={(e: any) => setPlaca(e.target.value)}
-                />
-                <CustomInput
-                  id="floatingDate"
-                  type="date"
-                  text="Fecha"
-                  onChange={(e: any) => setDate(e.target.value)}
-                />
-                <CustomInput
-                  id="floatingTime"
-                  type="text"
-                  text="Hora (06:00)"
-                  onChange={(e: any) => setTime(e.target.value)}
-                />
-                <button type="submit" className="btn btn-primary">
-                  ENVIAR
-                </button>
-              </form>
+    <>
+      <div className="container-fluid d-flex flex-column align-items-center justify-content-center">
+        <h1>Pico y Placa</h1>
+        <div className="row">
+          <div className="col">
+            <div className="card">
+              <div className="card-body">
+                <form action="" onSubmit={handlePicoPlaca}>
+                  <CustomInput
+                    id="floatingPlaca"
+                    type="text"
+                    text="Placa"
+                    onChange={(e: any) => setPlaca(e.target.value)}
+                  />
+                  <CustomInput
+                    id="floatingDate"
+                    type="date"
+                    text="Fecha"
+                    onChange={(e: any) => setDate(e.target.value)}
+                  />
+                  <CustomInput
+                    id="floatingTime"
+                    type="text"
+                    text="Hora (06:00)"
+                    onChange={(e: any) => setTime(e.target.value)}
+                  />
+                  <button type="submit" className="btn btn-primary">
+                    ENVIAR
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
