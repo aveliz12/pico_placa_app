@@ -1,4 +1,4 @@
-import { getCorrectTime } from "./time";
+import { getCorrectTime } from "../time";
 
 describe("correctTime", () => {
   test("should return true for correct times", () => {

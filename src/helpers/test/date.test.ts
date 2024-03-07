@@ -1,4 +1,4 @@
-import { getDay, isHoliday } from "./date";
+import { getDay, isHoliday } from "../date";
 
 describe("correctDate", () => {
   test("should return a day of the week", () => {
