@@ -8,6 +8,7 @@ export const getCorrectTime = (time: string): boolean => {
 
   if (
     (time >= "06:00" && time <= "09:30") ||
+    (time >= "6:00" && time <= "9:30") ||
     (time >= "16:00" && time <= "21:00")
   ) {
     return true;

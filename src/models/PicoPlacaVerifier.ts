@@ -21,7 +21,7 @@ class PicoPlacaVerfier {
     const correctTime = getCorrectTime(this.time);
 
     const lastDigit = this.placa[this.placa.length - 1];
-
+    console.log(day);
     if (
       ((day === "Lunes" && (lastDigit === "1" || lastDigit === "2")) ||
         (day === "Martes" && (lastDigit === "3" || lastDigit === "4")) ||

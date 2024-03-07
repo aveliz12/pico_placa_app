@@ -1,13 +1,13 @@
 //Obtener dias de la semana a traves de la fecha
 export const getDay = (date: Date): string => {
   const daysWeek = [
+    "Domingo",
     "Lunes",
     "Martes",
     "Miércoles",
     "Jueves",
     "Viernes",
     "Sábado",
-    "Domingo",
   ];
   const dayWeek = daysWeek[date.getDay()];
   return dayWeek;
@@ -28,7 +28,9 @@ export const isHoliday = (date: Date): boolean => {
     "12/25",
   ];
 
-  const dateFormat = `${date.getMonth() + 1}/${date.getDate()}`;
-
+  const dateFormat = `${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}`;
+  console.log(dateFormat);
   return holidays.includes(dateFormat);
 };

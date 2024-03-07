@@ -12,7 +12,13 @@ function App() {
   //Gestion de pico-placa
   const handlePicoPlaca = (e: any) => {
     e.preventDefault();
-    const verifierPicoPlaca = new PicoPlacaVerfier(placa, new Date(date), time);
+    console.log(date);
+    const verifierPicoPlaca = new PicoPlacaVerfier(
+      placa,
+      new Date(`${date}T17:00:00Z`),
+      time
+    );
+    console.log(verifierPicoPlaca);
     if (placa == "" || date == "" || time == "") {
       alert("DEBE COMPLETAR TODOS LOS CAMPOS.");
     } else if (!validatePlaca(placa)) {
