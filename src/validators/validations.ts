@@ -7,6 +7,6 @@ export const validatePlaca = (placa: string): boolean => {
 
 //Validar hora ingresada
 export const validateTime = (time: string): boolean => {
-  const regexTime = /^(?:[01]?[0-9]|2[0-3]):[0-5]\d$/;
+  const regexTime = /^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$/;
   return regexTime.test(time);
 };
