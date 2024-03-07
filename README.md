@@ -34,3 +34,6 @@ INSTALAR DEPENDECIAS
 
 RUN APP
 - npm run dev
+
+RUN TEST
+ - npm test

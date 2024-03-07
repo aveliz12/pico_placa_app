@@ -1,13 +1,12 @@
 type Props = {
   id: string;
   type: string;
-  placeholder?: string;
   text: string;
-  onChange: any;
+  onChange?: any;
 };
 
 //INPUT PERSONALIZADO
-const CustomInput = ({ id, type, placeholder, text, onChange }: Props) => {
+const CustomInput = ({ id, type, text, onChange }: Props) => {
   return (
     <>
       <div className="form-floating mb-3">
@@ -15,7 +14,6 @@ const CustomInput = ({ id, type, placeholder, text, onChange }: Props) => {
           type={type}
           className="form-control"
           id={id}
-          placeholder={placeholder}
           onChange={onChange}
         />
         <label htmlFor={id}>{text}</label>
